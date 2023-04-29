@@ -98,13 +98,18 @@ function viewMoreClickHandler(element, event){
     productRating.classList.add("modal_heading");
     innerSizeDiv.appendChild(productRating);
 
+    let addToCartDiv = document.createElement("div");
+    addToCartDiv.classList.add("add_to_cart_btn_div");
+
     let addToCart = document.createElement("button");
     addToCart.classList.add("add_to_cart_btn");
     addToCart.innerHTML = "Add to Cart";
     addToCart.setAttribute("data-clickable", true);
     addToCart.addEventListener("click", modalClose());
 
-    mInnerDiv.appendChild(addToCart);
+    addToCartDiv.appendChild(addToCart);
+
+    mInnerDiv.appendChild(addToCartDiv);
 
     mContentDiv.appendChild(mInnerDiv);
   }
@@ -249,11 +254,17 @@ const displayElement = (ele) => {
     mainContainer.appendChild(contentDiv);
   }
   let passElement = mainContainer;
+
+  let viewMoreDiv = document.createElement("div");
+  viewMoreDiv.classList.add("add_to_cart_btn_div");
+
   let viewMore = document.createElement("button");
   viewMore.innerHTML = "View More";
   viewMore.setAttribute("data-clickable", true);
   viewMore.addEventListener("click", viewMoreClickHandlerArg(passElement));
   viewMore.classList.add("view_more_btn");
-  contentDiv.appendChild(viewMore);
+  viewMoreDiv.appendChild(viewMore);
+
+  contentDiv.appendChild(viewMoreDiv);
   outerContainer.appendChild(mainContainer);
 };
