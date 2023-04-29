@@ -100,8 +100,10 @@ function viewMoreClickHandler(element, event){
 
     let addToCart = document.createElement("button");
     addToCart.classList.add("add_to_cart_btn");
-    // addToCart.classList.add("view_more_btn");
     addToCart.innerHTML = "Add to Cart";
+    addToCart.setAttribute("data-clickable", true);
+    addToCart.addEventListener("click", modalClose());
+
     mInnerDiv.appendChild(addToCart);
 
     mContentDiv.appendChild(mInnerDiv);
