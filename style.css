@@ -144,9 +144,6 @@
 }
 
 .add_to_cart_btn {
-    position: absolute;
-    bottom: 1%;
-    right: 1%;
     background-color: #fff;
     border: none;
     /* width: 50px;
@@ -157,6 +154,7 @@
     padding: 4px 8px;
     border: solid 1px #2874f0;
     border-radius: 2px;
+    margin: 0 8px 8px 8px;
 }
 
 /* End of element div */
@@ -179,11 +177,12 @@
 
 .modal_content_div {
     width: 70%;
-    /* height: auto; */
     background-color: #fff;
     position: fixed;
     top: 5%;
     left: 15%;
+    overflow-y: scroll;
+    height: 90vh;
 }
 
 .modal_inner_div {
@@ -263,6 +262,7 @@
     .modal_content_div{
         width: 88%;
         left: 6%;
+        /* overflow-y: scroll; */
     }
     .inner_image_div{
         width: 40%;
