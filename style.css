@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Font Classes */
+
+.robot_slab {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Font Classes ends here */
+
+/* Start of Heading  */
+
+.site_name_header {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* background-image: linear-gradient(45deg,
+              rgba(245,70,66, 0.75),
+              rgba(8,83,156, 0.75)); */
+    background-color: #2874f0;
+}
+
+.site_name_header_main_div {
+    padding: 10px 0;
+}
+
+.site_name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* End of Heading */
+
+/* Start of Product Cards */
+
+.product_cards_section {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.product_cards_section_main_div {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    gap: 30px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.product_cards_link {
+    text-decoration: none;
+}
+
+.product_cards_section_inner_div {
+    border: solid 1px #888888;
+    border-radius: 4px;
+    box-shadow: 10px 10px 5px #888888;
+    transition: all 1s;
+}
+
+.product_cards_section_img {
+    display: block;
+    width: 100%;
+}
+
+.product_cards_section_title {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.product_cards_section_title h2 {
+    color: #2874f0;
+}
+
+.product_cards_section_inner_div:hover {
+    transform: scale(1.05);
+}
+
+/* End of Product Cards */
+
+
+/* Start of main div */
+
+.outer_div {
+    width: 70%;
+    margin: 20px auto 0 auto;
+}
+
+/* End of main div */
+
+/* Start of element div */
+
+#outerContainer {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mainContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 10px;
+    margin: 20px 0 20px;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+}
+
+.imageContainer {
+    text-align: center;
+}
+
+.productImage {
+    width: 80%;
+    height: 100%;
+}
+
+.contentContainer {
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.contentMargin {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.view_more_btn {
+    background-color: #2874f0;
+    color: #fff;
+    padding: 2px 4px;
+    border: solid 1px #2874f0;
+    border-radius: 2px;
+
+}
+
+.add_to_cart_btn {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    background-color: #fff;
+    border: none;
+    /* width: 50px;
+    height: 50px; */
+    z-index: 5;
+    background-color: #2874f0;
+    color: #fff;
+    padding: 4px 8px;
+    border: solid 1px #2874f0;
+    border-radius: 2px;
+}
+
+/* End of element div */
+
+/* Start of modal area */
+
+.modal_body_div_scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.modal_back_color {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000dd;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal_content_div {
+    width: 70%;
+    /* height: auto; */
+    background-color: #fff;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+}
+
+.modal_inner_div {
+    width: 100%;
+    background-color: #fff;
+}
+
+.modal_cancel_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.modal_cancel_icon {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    color: #2874f0;
+}
+
+.inner_image_div {
+    width: 25%;
+    border: solid 1px;
+    margin: 20px auto;
+}
+
+.inner_image {
+    width: 100%;
+}
+
+.modal_heading {
+    margin: 20px 2%;
+}
+
+/* End of modal are */
+
+/* Start of Media Query */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .product_cards_section_main_div {
+        width: 78%;
+    }
+    #outerContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+    .product_cards_section_main_div {
+        width: 95%;
+    }
+    #outerContainer{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 425px) {
+    .product_cards_section_main_div {
+        width: 95%;
+        grid-template-columns: repeat(1, 100%);
+    }
+    #outerContainer{
+        width: 92%;
+    }
+    .mainContainer{
+        grid-template-columns: 100%;
+    }
+    .imageContainer{
+        margin-bottom: 20px;
+    }
+    .modal_content_div{
+        width: 88%;
+        left: 6%;
+    }
+    .inner_image_div{
+        width: 40%;
+    }
+}
+
+/* End of Media Query */

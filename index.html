@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C&N Shop</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start of Heading -->
+    <header class="site_name_header">
+      <div class="site_name_header_main_div">
+        <h1 class="site_name">C&N Shop</h1>
+      </div>
+    </header>
+    <!-- End of Heading -->
+
+    <!-- Start of Product Cards -->
+    <section class="product_cards_section">
+      <div class="product_cards_section_main_div">
+        <a href="./nextPage.html" class="product_cards_link" target="blank">
+          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`men's clothing`)">
+            <div class="product_cards_section_img_div">
+              <img
+                class="product_cards_section_img"
+                src="./media/shirt.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product_cards_section_title">
+              <h2>Men's Clothing</h2>
+            </div>
+          </div>
+        </a>
+        <a href="./nextPage.html" class="product_cards_link" target="blank">
+          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`jewelery`)">
+            <div class="product_cards_section_img_div">
+              <img
+                class="product_cards_section_img"
+                src="./media/jewllery.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product_cards_section_title">
+              <h2>Jewelery</h2>
+            </div>
+          </div>
+        </a>
+        <a href="./nextPage.html" class="product_cards_link" target="blank">
+          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`electronics`)">
+            <div class="product_cards_section_img_div">
+              <img
+                class="product_cards_section_img"
+                src="./media/electronics.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product_cards_section_title">
+              <h2>Electronics</h2>
+            </div>
+          </div>
+        </a>
+        <a href="./nextPage.html" class="product_cards_link" target="blank">
+          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`women's clothing`)">
+            <div class="product_cards_section_img_div">
+              <img
+                class="product_cards_section_img"
+                src="./media/wclothing.jpg"
+                alt=""
+              />
+            </div>
+            <div class="product_cards_section_title">
+              <h2>Women's Clothing</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- End of Product Cards -->
+    <script src="script.js"></script>
+  </body>
+</html>
