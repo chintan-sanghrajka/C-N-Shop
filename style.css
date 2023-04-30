@@ -164,6 +164,52 @@
 
 /* End of element div */
 
+/* Start of Carousel Section */
+.product_carousel{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.carousel_pos_div{
+    width: 100%;
+    height: 100%;
+}
+.carousel_btn_div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    transition: all 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.carousel_left_btn{
+    top: 47%;
+    left: 5%;
+}
+.carousel_right_btn{
+    top: 47%;
+    right: 5%;
+}
+.carousel_btn_div:hover{
+    background-color: #00000045;
+}
+.carousel_img_div{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.carousel_img{
+    width: 100%;
+    height: 100%;
+}
+.carousel_img_display{
+    display: block;
+}
+/* End of Carousel Section */
+
 /* Start of modal area */
 
 .modal_body_div_scroll {
@@ -228,6 +274,8 @@
 }
 
 /* End of modal are */
+
+
 
 /* Start of Media Query */
 

@@ -268,3 +268,48 @@ const displayElement = (ele) => {
   contentDiv.appendChild(viewMoreDiv);
   outerContainer.appendChild(mainContainer);
 };
+
+// Start of Carousel Section
+let carouselCount = 0;
+function prevImg(){
+  if(carouselCount === 0){
+    carouselCount = 2;
+  }
+  else{
+    carouselCount = carouselCount - 1;
+  }
+  displayImage();
+}
+function nextImg(){
+  if(carouselCount === 2){
+    carouselCount = 0;
+  }
+  else{
+    carouselCount = carouselCount + 1;
+  }
+  displayImage();
+}
+function displayImage(){
+  let slidesArr = document.getElementsByClassName("carousel_img_div");
+  for(let i of slidesArr){
+    if(i.classList.contains("carousel_img_display")){
+      i.classList.remove("carousel_img_display");
+    }
+  }
+  slidesArr[carouselCount].classList.add("carousel_img_display");
+}
+
+function carouselChange(){
+  while(true){
+    setInterval
+  }
+}
+setInterval(function(){
+  nextImg();
+},2000);
+
+function loadEvents(){
+
+}
+
+// End of Carousel Section
