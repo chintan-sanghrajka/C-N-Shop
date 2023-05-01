@@ -271,45 +271,68 @@ const displayElement = (ele) => {
 
 // Start of Carousel Section
 let carouselCount = 0;
-function prevImg(){
-  if(carouselCount === 0){
-    carouselCount = 2;
-  }
-  else{
-    carouselCount = carouselCount - 1;
-  }
-  displayImage();
-}
-function nextImg(){
-  if(carouselCount === 2){
-    carouselCount = 0;
-  }
-  else{
-    carouselCount = carouselCount + 1;
-  }
-  displayImage();
-}
-function displayImage(){
-  let slidesArr = document.getElementsByClassName("carousel_img_div");
-  for(let i of slidesArr){
-    if(i.classList.contains("carousel_img_display")){
-      i.classList.remove("carousel_img_display");
-    }
-  }
-  slidesArr[carouselCount].classList.add("carousel_img_display");
-}
+// function prevImg(){
+//   if(carouselCount === 0){
+//     carouselCount = 2;
+//   }
+//   else{
+//     carouselCount = carouselCount - 1;
+//   }
+//   displayImage();
+// }
+// function nextImg(){
+//   if(carouselCount === 2){
+//     carouselCount = 0;
+//   }
+//   else{
+//     carouselCount = carouselCount + 1;
+//   }
+//   displayImage();
+// }
+// function displayImage(){
+//   let slidesArr = document.getElementsByClassName("carousel_img_div");
+//   for(let i of slidesArr){
+//     if(i.classList.contains("carousel_img_display")){
+//       i.classList.remove("carousel_img_display");
+//     }
+//   }
+//   slidesArr[carouselCount].classList.add("carousel_img_display");
+// }
 
-function carouselChange(){
-  while(true){
-    setInterval
+let slidesArr = document.querySelectorAll(".carousel_img_div");
+let counter = 0;
+console.log(slidesArr);
+slidesArr.forEach((element,index) => {
+    element.style.left = `${index * 100}%`;
+});
+
+function nextImg(){
+  if(counter === 2){
+    counter = 0
   }
+  else{
+  counter++;
+  }
+  console.log(counter);
+  slideImage();
+}
+function prevImg(){
+  if(counter === 0){
+    counter = 2
+  }
+  else{
+  counter--;
+  }
+  console.log(counter);
+  slideImage();
+}
+function slideImage(){
+  slidesArr.forEach((element,index)=>{
+    element.style.transform = `translateX(-${counter*100}%)`;
+  })
 }
 setInterval(function(){
   nextImg();
-},2000);
-
-function loadEvents(){
-
-}
+},3000);
 
 // End of Carousel Section
