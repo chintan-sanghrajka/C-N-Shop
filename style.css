@@ -386,6 +386,12 @@
     .offset_main_div{
         width: 35%;
     }
+    .offset_icon_div{
+        width: 5%;
+    }
+    .site_name_header_main_div{
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
@@ -406,6 +412,12 @@
     }
     .offset_main_div{
         width: 42%;
+    }
+    .offset_icon_div{
+        width: 7%;
+    }
+    .site_name_header_main_div{
+        width: 86%;
     }
 }
 
@@ -440,7 +452,13 @@
         font-size: 22px;
     }
     .offset_main_div{
-        width: 70%;
+        width: 88%;
+    }
+    .offset_icon_div{
+        width: 12%;
+    }
+    .site_name_header_main_div{
+        width: 78%;
     }
 }
 
