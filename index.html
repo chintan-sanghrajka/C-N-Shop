@@ -1,118 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C&N Shop</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  </head>
 
-  <body>
-    <!-- Start of Heading -->
-    <header class="site_name_header">
-      <div class="site_name_header_main_div">
-        <h1 class="site_name">C&N Shop</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C&N Shop</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Start of Heading -->
+  <header class="site_name_header">
+    <div class="offset_icon_div" onclick="openOffset()">
+      <i class="bi bi-person-fill"></i>
+    </div>
+    <div class="site_name_header_main_div">
+      <h1 class="site_name">C&N Shop</h1>
+    </div>
+  </header>
+  <!-- End of Heading -->
+
+  <!-- Start of Carousel Section -->
+
+  <section class="product_carousel">
+
+    <div class="carousel_pos_div">
+      <div class="carousel_img_div">
+        <img src="media/carousel_img_1.webp" alt="" class="carousel_img">
       </div>
-    </header>
-    <!-- End of Heading -->
+      <div class="carousel_img_div">
+        <img src="media/carousel_img_2.webp" alt="" class="carousel_img">
+      </div>
+      <div class="carousel_img_div">
+        <img src="media/carousel_img_3.webp" alt="" class="carousel_img">
+      </div>
+    </div>
 
-    <!-- Start of Carousel Section -->
+    <div class="carousel_left_btn carousel_btn_div" onclick="prevImg()">
+      <i class="bi bi-chevron-left"></i>
+    </div>
 
-    <section class="product_carousel">
+    <div class="carousel_right_btn carousel_btn_div" onclick="nextImg()">
+      <i class="bi bi-chevron-right"></i>
+    </div>
 
-      <div class="carousel_pos_div">
-        <div class="carousel_img_div">
-          <img src="media/carousel_img_1.webp" alt="" class="carousel_img">
+  </section>
+
+  <!-- End of Carousel Section -->
+
+  <!-- Start of Product Cards -->
+  <section class="product_cards_section">
+    <div class="product_cards_section_main_div">
+      <a href="./nextPage.html" class="product_cards_link" target="blank">
+        <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`men's clothing`)">
+          <div class="product_cards_section_img_div">
+            <img class="product_cards_section_img" src="./media/shirt.jpg" alt="" />
+          </div>
+          <div class="product_cards_section_title">
+            <h2>Men's Clothing</h2>
+          </div>
         </div>
-        <div class="carousel_img_div">
-          <img src="media/carousel_img_2.webp" alt="" class="carousel_img">
+      </a>
+      <a href="./nextPage.html" class="product_cards_link" target="blank">
+        <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`jewelery`)">
+          <div class="product_cards_section_img_div">
+            <img class="product_cards_section_img" src="./media/jewllery.jpg" alt="" />
+          </div>
+          <div class="product_cards_section_title">
+            <h2>Jewelery</h2>
+          </div>
         </div>
-        <div class="carousel_img_div">
-          <img src="media/carousel_img_3.webp" alt="" class="carousel_img">
+      </a>
+      <a href="./nextPage.html" class="product_cards_link" target="blank">
+        <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`electronics`)">
+          <div class="product_cards_section_img_div">
+            <img class="product_cards_section_img" src="./media/electronics.jpg" alt="" />
+          </div>
+          <div class="product_cards_section_title">
+            <h2>Electronics</h2>
+          </div>
+        </div>
+      </a>
+      <a href="./nextPage.html" class="product_cards_link" target="blank">
+        <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`women's clothing`)">
+          <div class="product_cards_section_img_div">
+            <img class="product_cards_section_img" src="./media/wclothing.jpg" alt="" />
+          </div>
+          <div class="product_cards_section_title">
+            <h2>Women's Clothing</h2>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- End of Product Cards -->
+
+  <section>
+    <div class="offset_main_div" id="offset_div">
+      <div class="offset_welcome_div">
+        <div class="offset_user_div">
+          <div class="offset_user_icon_div">
+            <i class="bi bi-person-circle"></i>
+          </div>
+          <h2 class="offset_user_heading robot_slab">Welcome, User</h2>
+        </div>
+        <div class="offset_close_icon_div" onclick="closeOffset()">
+          <i class="bi bi-x-lg"></i>
+        </div>
+        <div class="offset_menu_div">
+          <div class="offset_menu_icon_div">
+            <i class="bi bi-cart-check"></i>
+          </div>
+          <h2 class="offset_menu_item">Your Order</h2>
+        </div>
+        <div class="offset_menu_div">
+          <div class="offset_menu_icon_div">
+            <i class="bi bi-heart"></i>
+          </div>
+          <h2 class="offset_menu_item">Wishlist</h2>
+        </div>
+        <div class="offset_menu_div">
+          <div class="offset_menu_icon_div">
+            <i class="bi bi-gear"></i>
+          </div>
+          <h2 class="offset_menu_item">Settings</h2>
+        </div>
+        <div class="offset_menu_div">
+          <div class="offset_menu_icon_div">
+            <i class="bi bi-person-fill-check"></i>
+          </div>
+          <h2 class="offset_menu_item">Your Account</h2>
+        </div>
+        <div class="offset_menu_div">
+          <div class="offset_menu_icon_div">
+            <i class="bi bi-box-arrow-right"></i>
+          </div>
+          <h2 class="offset_menu_item">Log out</h2>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class = "carousel_left_btn carousel_btn_div" onclick="prevImg()">
-        <i class="bi bi-chevron-left"></i>
-      </div>
+  <script src="script.js"></script>
+</body>
 
-      <div class = "carousel_right_btn carousel_btn_div" onclick="nextImg()">
-        <i class="bi bi-chevron-right"></i>
-      </div>
-
-    </section>
-
-    <!-- End of Carousel Section -->
-
-    <!-- Start of Product Cards -->
-    <section class="product_cards_section">
-      <div class="product_cards_section_main_div">
-        <a href="./nextPage.html" class="product_cards_link" target="blank">
-          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`men's clothing`)">
-            <div class="product_cards_section_img_div">
-              <img
-                class="product_cards_section_img"
-                src="./media/shirt.jpg"
-                alt=""
-              />
-            </div>
-            <div class="product_cards_section_title">
-              <h2>Men's Clothing</h2>
-            </div>
-          </div>
-        </a>
-        <a href="./nextPage.html" class="product_cards_link" target="blank">
-          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`jewelery`)">
-            <div class="product_cards_section_img_div">
-              <img
-                class="product_cards_section_img"
-                src="./media/jewllery.jpg"
-                alt=""
-              />
-            </div>
-            <div class="product_cards_section_title">
-              <h2>Jewelery</h2>
-            </div>
-          </div>
-        </a>
-        <a href="./nextPage.html" class="product_cards_link" target="blank">
-          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`electronics`)">
-            <div class="product_cards_section_img_div">
-              <img
-                class="product_cards_section_img"
-                src="./media/electronics.jpg"
-                alt=""
-              />
-            </div>
-            <div class="product_cards_section_title">
-              <h2>Electronics</h2>
-            </div>
-          </div>
-        </a>
-        <a href="./nextPage.html" class="product_cards_link" target="blank">
-          <div class="product_cards_section_inner_div" onclick="categoryBifurcation(`women's clothing`)">
-            <div class="product_cards_section_img_div">
-              <img
-                class="product_cards_section_img"
-                src="./media/wclothing.jpg"
-                alt=""
-              />
-            </div>
-            <div class="product_cards_section_title">
-              <h2>Women's Clothing</h2>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-    <!-- End of Product Cards -->
-
-    <script src="script.js"></script>
-  </body>
 </html>

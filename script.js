@@ -301,7 +301,6 @@ let carouselCount = 0;
 
 let slidesArr = document.querySelectorAll(".carousel_img_div");
 let counter = 0;
-console.log(slidesArr);
 slidesArr.forEach((element,index) => {
     element.style.left = `${index * 100}%`;
 });
@@ -313,7 +312,6 @@ function nextImg(){
   else{
   counter++;
   }
-  console.log(counter);
   slideImage();
 }
 function prevImg(){
@@ -323,7 +321,6 @@ function prevImg(){
   else{
   counter--;
   }
-  console.log(counter);
   slideImage();
 }
 function slideImage(){
@@ -336,3 +333,16 @@ setInterval(function(){
 },3000);
 
 // End of Carousel Section
+
+// Start of Offset Selection
+
+function openOffset(){
+  let offsetDiv = document.getElementById("offset_div")
+  offsetDiv.style.transform = `translateX(0)`;
+}
+function closeOffset(){
+  let offsetDiv = document.getElementById("offset_div")
+  offsetDiv.style.transform = `translateX(-100%)`;
+}
+
+// End of Offset Section

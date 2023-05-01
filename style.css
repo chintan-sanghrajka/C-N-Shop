@@ -18,21 +18,19 @@
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    /* background-image: linear-gradient(45deg,
-              rgba(245,70,66, 0.75),
-              rgba(8,83,156, 0.75)); */
     background-color: #2874f0;
 }
 
 .site_name_header_main_div {
     padding: 10px 0;
+    width: 94%;
 }
 
 .site_name {
     font-family: 'Roboto Slab', serif;
     font-size: 24px;
     color: #fff;
+    text-align: center;
 }
 
 /* End of Heading */
@@ -169,6 +167,7 @@
     width: 100%;
     height: 80vh;
     position: relative;
+    box-shadow: 0px 10px 5px #888888;
 }
 .carousel_pos_div{
     width: 100%;
@@ -296,6 +295,81 @@
     left: 0;
 }
 
+/* Start of Offset Section */
+
+.offset_main_div{
+    position: fixed;
+    top: 0;
+    width: 24%;
+    height: 100vh;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: 1s;
+}
+.offset_icon_div{
+    width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    border-right: solid 1px #fff;
+    box-sizing: border-box;
+}
+.offset_welcome_div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.offset_user_div{
+    width: 86%;
+    border-bottom: solid 1px #2874f0;
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.offset_user_heading{
+    font-size: 24px;
+    color: #2874f0;
+    margin-left: 10px;
+}
+.offset_close_icon_div{
+    width: 14%;
+    border-bottom: solid 1px #2874f0;
+    border-left: solid 1px #2874f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-sizing: border-box;
+    color: #2874f0;
+}
+.offset_menu_div{
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: solid 1px #f5f5f5;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.offset_menu_icon_div{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.offset_menu_item{
+    font-size: 18px;
+    margin-left: 8px;
+}
+.offset_user_icon_div{
+    font-size: 24px;
+    color: #2874f0;
+    margin-left: 20px;
+}
+
+
+/* End of Offset Section */
 
 /* Start of Media Query */
 
@@ -308,6 +382,9 @@
     }
     .product_carousel{
         height: 60vh;
+    }
+    .offset_main_div{
+        width: 35%;
     }
 }
 
@@ -326,6 +403,9 @@
         width: 45px;
         height: 45px;
         font-size: 30px;
+    }
+    .offset_main_div{
+        width: 42%;
     }
 }
 
@@ -358,6 +438,9 @@
         width: 35px;
         height: 35px;
         font-size: 22px;
+    }
+    .offset_main_div{
+        width: 70%;
     }
 }
 
