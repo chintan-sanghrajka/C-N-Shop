@@ -19,6 +19,9 @@
     display: flex;
     flex-wrap: nowrap;
     background-color: #2874f0;
+    position: sticky;
+    top: 0;
+    z-index: 9;
 }
 
 .site_name_header_main_div {
@@ -143,11 +146,10 @@
 
 .add_to_cart_btn_div{
     width: 100%;
-    display: flex;
-    justify-content: end;
+    box-sizing: border-box;
 }
 
-.add_to_cart_btn {
+.add_to_cart_btn{
     background-color: #fff;
     border: none;
     /* text-align: right; */
@@ -167,7 +169,9 @@
     width: 100%;
     height: 80vh;
     position: relative;
+    top: 0;
     box-shadow: 0px 10px 5px #888888;
+    z-index: 5;
 }
 .carousel_pos_div{
     width: 100%;
@@ -303,7 +307,7 @@
     width: 24%;
     height: 100vh;
     left: 0;
-    z-index: 10;
+    z-index: 30;
     background-color: white;
     transform: translateX(-100%);
     transition: 1s;
@@ -368,7 +372,6 @@
     margin-left: 20px;
 }
 
-
 /* End of Offset Section */
 
 /* Start of Media Query */
@@ -403,7 +406,7 @@
         width: 95%;
     }
     .product_carousel{
-        height: 60vh;
+        height: 50vh;
     }
     .carousel_btn_div{
         width: 45px;
